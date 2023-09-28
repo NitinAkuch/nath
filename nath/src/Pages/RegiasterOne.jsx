@@ -44,15 +44,16 @@ const Register_one = () => {
       <Container>
         <Wrapper>
           <Title>Register</Title>
-          <div>
-            {dummyData.map((field) => {
-              <InputField
-                key={field.id}
-                type={field.type}
-                placeholder={field.placeholder}
-              />;
-            })}
-          </div>
+
+          {dummyData.map((field) => (
+            <InputField
+              key={field.id}
+              type={field.type}
+              placeholder={field.placeholders}
+              label={field.label}
+            />
+          ))}
+
           <ButtonWrapper>
             <Stack spacing={2} direction="row">
               <Button variant="contained">Back</Button>
