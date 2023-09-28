@@ -1,0 +1,43 @@
+import React from 'react';
+import styled from 'styled-components'; // Import styled-components
+import inputFieldsData from './inputFields.json';
+
+const InputContainer = styled.div`
+  margin: 10px;
+`;
+
+const InputLabel = styled.label`
+  font-weight: bold;
+`;
+
+const Input = styled.input`
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+`;
+
+function InputField({ type, id, placeholder }) {
+  return (
+    <InputContainer>
+      <InputLabel htmlFor={id}>{placeholder}</InputLabel>
+      <Input type={type} id={id} placeholder={placeholder} />
+    </InputContainer>
+  );
+}
+
+function App() {
+  return (
+    <div>
+      {inputFieldsData.map((field, index) => (
+        <InputField
+          key={index} // You should use a unique identifier here
+          type={field.type}
+          id={field.id}
+          placeholder={field.placeholder}
+        />
+      ))}
+    </div>
+  );
+}
+
+export default App;
