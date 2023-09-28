@@ -30,6 +30,17 @@ const Title = styled.h2`
   font-weight: 700;
   color: #1276ce;
 `;
+const DropdownCountries = styled.div`
+  margin: 10px;
+  color: #05628a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+const Select = styled.select`
+  margin: 5px;
+  padding: 10px;
+`;
 const ButtonWrapper = styled.button`
   border: none;
   display: flex;
@@ -51,8 +62,20 @@ const Register_one = () => {
               type={field.type}
               placeholder={field.placeholders}
               label={field.label}
+              maxlength={field.maxlength}
+              default={field.default}
             />
           ))}
+          <DropdownCountries>
+            <label for="countries">Choose Your Country:</label>
+            <Select id="countries">
+              <option>India</option>
+              <option>USA</option>
+              <option>UK</option>
+              <option>China</option>
+              <option>France</option>
+            </Select>
+          </DropdownCountries>
 
           <ButtonWrapper>
             <Stack spacing={2} direction="row">

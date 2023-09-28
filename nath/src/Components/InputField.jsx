@@ -34,6 +34,7 @@ import styled from "styled-components";
 const Input = styled.input`
   margin: 5px;
   padding: 10px;
+
   background-color: #abcdda;
   border: 2px solid skyblue;
   border-radius: 5px;
@@ -55,11 +56,17 @@ const Input = styled.input`
     }
   }
 `;
-const InputField = ({ type, id, placeholder, label }) => {
+const InputField = ({ type, id, placeholder, label, maxlength }) => {
   return (
     <div>
       {/* <InputLabel htmlFor={id}>{placeholder}</InputLabel> */}
-      <Input type={type} id={id} placeholder={placeholder} label={label} />
+      <Input
+        type={type}
+        id={id}
+        placeholder={placeholder}
+        label={label}
+        maxlength={maxlength}
+      />
     </div>
   );
 };

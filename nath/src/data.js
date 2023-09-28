@@ -2,48 +2,57 @@ export const dummyData = [
   {
     type: "text",
     id: 1,
-    placeholders: "Enter your name",
+    placeholders: "Enter your Name",
+    maxlength: "50",
+    desc: "This is a text input field for your name.",
+  },
+  {
+    type: "text",
+    id: 2,
+    placeholders: "Enter your LastName",
+    maxlength: "50",
     desc: "This is a text input field for your name.",
   },
   {
     type: "email",
-    id: 2,
-    placeholders: "Enter your E-mail",
-
-    desc: "This is a text input field for your name.",
-  },
-  {
-    type: "text",
     id: 3,
+    placeholders: "Enter your E-mail",
+    maxlength: "20",
+    desc: "This is a text input field for your name.",
+  },
+  {
+    type: "tel",
+    id: 4,
+    placeholders: "Enter your Mobile Number",
+    maxlength: "10",
+    desc: "This is a text input field for your name.",
+    default: "+91",
+  },
+  {
+    type: "text",
+    id: 5,
     placeholders: "Enter your Address",
-
+    maxlength: "50",
     desc: "This is a text input field for your name.",
   },
   {
     type: "text",
-    id: 4,
+    id: 6,
     placeholders: "Enter your City",
-
+    maxlength: "50",
     desc: "This is a text input field for your name.",
   },
   {
     type: "password",
-    id: 5,
+    id: 7,
     placeholders: "Enter your Password",
 
     desc: "This is a text input field for your name.",
   },
   {
     type: "radio",
-    id: 6,
+    id: 8,
     label: ["MALE", "FEMALE", "OTHER"],
-    desc: "This is a text input field for your name.",
-  },
-  {
-    type: "email",
-    id: 7,
-    placeholders: "Enter your surname",
-
     desc: "This is a text input field for your name.",
   },
 ];
